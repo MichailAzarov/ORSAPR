@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B135B642-C085-464C-AF24-9FBCDA042DA2}</ProjectGuid>
+    <ProjectGuid>{E50A5AF0-CF2B-46EA-BFCF-A4A00E51C08E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>FlangeUI</RootNamespace>
     <AssemblyName>FlangeUI</AssemblyName>
@@ -78,6 +78,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Flange\Flange.csproj">
+      <Project>{7ce685cf-19df-4186-9d17-e60cd6e4b205}</Project>
+      <Name>Flange</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
