@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FlangeNew;
 
 namespace FlangeUI
 {
@@ -16,7 +17,7 @@ namespace FlangeUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new MainForm(new KompasConnector()));
         }
     }
 }

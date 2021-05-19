@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.ClearButton = new System.Windows.Forms.Button();
             this.BuildModelButton = new System.Windows.Forms.Button();
             this.ParametersGroupBox = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -43,24 +43,25 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.CaseThicknessTextBox = new System.Windows.Forms.TextBox();
-            this.NeckDiameterTextBox = new System.Windows.Forms.TextBox();
-            this.NeckHeightTextBox = new System.Windows.Forms.TextBox();
-            this.FlaskHeightTextBox = new System.Windows.Forms.TextBox();
-            this.FlaskWidthTextBox = new System.Windows.Forms.TextBox();
-            this.FlaskLengthTextBox = new System.Windows.Forms.TextBox();
+            this.HoleDiameterTextBox = new System.Windows.Forms.TextBox();
+            this.FlangeLengthTextBox = new System.Windows.Forms.TextBox();
+            this.HoleNumberTextBox = new System.Windows.Forms.TextBox();
+            this.FlangeInnerDiameterTextBox = new System.Windows.Forms.TextBox();
+            this.FlangeCenterDistanceTextBox = new System.Windows.Forms.TextBox();
+            this.FlangeExternalDiameterTextBox = new System.Windows.Forms.TextBox();
             this.ParametersGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // ClearButton
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Location = new System.Drawing.Point(23, 186);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Очистить поля";
-            this.button1.UseVisualStyleBackColor = true;
+            this.ClearButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ClearButton.Location = new System.Drawing.Point(23, 186);
+            this.ClearButton.Name = "ClearButton";
+            this.ClearButton.Size = new System.Drawing.Size(122, 23);
+            this.ClearButton.TabIndex = 7;
+            this.ClearButton.Text = "Очистить поля";
+            this.ClearButton.UseVisualStyleBackColor = true;
+            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
             // 
             // BuildModelButton
             // 
@@ -71,6 +72,7 @@
             this.BuildModelButton.TabIndex = 6;
             this.BuildModelButton.Text = "Построить модель";
             this.BuildModelButton.UseVisualStyleBackColor = true;
+            this.BuildModelButton.Click += new System.EventHandler(this.BuildModelButton_Click);
             // 
             // ParametersGroupBox
             // 
@@ -89,12 +91,12 @@
             this.ParametersGroupBox.Controls.Add(this.label3);
             this.ParametersGroupBox.Controls.Add(this.label2);
             this.ParametersGroupBox.Controls.Add(this.label1);
-            this.ParametersGroupBox.Controls.Add(this.CaseThicknessTextBox);
-            this.ParametersGroupBox.Controls.Add(this.NeckDiameterTextBox);
-            this.ParametersGroupBox.Controls.Add(this.NeckHeightTextBox);
-            this.ParametersGroupBox.Controls.Add(this.FlaskHeightTextBox);
-            this.ParametersGroupBox.Controls.Add(this.FlaskWidthTextBox);
-            this.ParametersGroupBox.Controls.Add(this.FlaskLengthTextBox);
+            this.ParametersGroupBox.Controls.Add(this.HoleDiameterTextBox);
+            this.ParametersGroupBox.Controls.Add(this.FlangeLengthTextBox);
+            this.ParametersGroupBox.Controls.Add(this.HoleNumberTextBox);
+            this.ParametersGroupBox.Controls.Add(this.FlangeInnerDiameterTextBox);
+            this.ParametersGroupBox.Controls.Add(this.FlangeCenterDistanceTextBox);
+            this.ParametersGroupBox.Controls.Add(this.FlangeExternalDiameterTextBox);
             this.ParametersGroupBox.Location = new System.Drawing.Point(18, 11);
             this.ParametersGroupBox.Name = "ParametersGroupBox";
             this.ParametersGroupBox.Size = new System.Drawing.Size(398, 169);
@@ -222,62 +224,62 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Внешний диаметр:";
             // 
-            // CaseThicknessTextBox
+            // HoleDiameterTextBox
             // 
-            this.CaseThicknessTextBox.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CaseThicknessTextBox.Location = new System.Drawing.Point(213, 40);
-            this.CaseThicknessTextBox.Name = "CaseThicknessTextBox";
-            this.CaseThicknessTextBox.Size = new System.Drawing.Size(80, 20);
-            this.CaseThicknessTextBox.TabIndex = 1;
+            this.HoleDiameterTextBox.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.HoleDiameterTextBox.Location = new System.Drawing.Point(213, 40);
+            this.HoleDiameterTextBox.Name = "HoleDiameterTextBox";
+            this.HoleDiameterTextBox.Size = new System.Drawing.Size(80, 20);
+            this.HoleDiameterTextBox.TabIndex = 1;
             // 
-            // NeckDiameterTextBox
+            // FlangeLengthTextBox
             // 
-            this.NeckDiameterTextBox.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.NeckDiameterTextBox.Location = new System.Drawing.Point(213, 87);
-            this.NeckDiameterTextBox.Name = "NeckDiameterTextBox";
-            this.NeckDiameterTextBox.Size = new System.Drawing.Size(80, 20);
-            this.NeckDiameterTextBox.TabIndex = 3;
+            this.FlangeLengthTextBox.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FlangeLengthTextBox.Location = new System.Drawing.Point(213, 87);
+            this.FlangeLengthTextBox.Name = "FlangeLengthTextBox";
+            this.FlangeLengthTextBox.Size = new System.Drawing.Size(80, 20);
+            this.FlangeLengthTextBox.TabIndex = 3;
             // 
-            // NeckHeightTextBox
+            // HoleNumberTextBox
             // 
-            this.NeckHeightTextBox.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.NeckHeightTextBox.Location = new System.Drawing.Point(213, 134);
-            this.NeckHeightTextBox.Name = "NeckHeightTextBox";
-            this.NeckHeightTextBox.Size = new System.Drawing.Size(80, 20);
-            this.NeckHeightTextBox.TabIndex = 5;
+            this.HoleNumberTextBox.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.HoleNumberTextBox.Location = new System.Drawing.Point(213, 134);
+            this.HoleNumberTextBox.Name = "HoleNumberTextBox";
+            this.HoleNumberTextBox.Size = new System.Drawing.Size(80, 20);
+            this.HoleNumberTextBox.TabIndex = 5;
             // 
-            // FlaskHeightTextBox
+            // FlangeInnerDiameterTextBox
             // 
-            this.FlaskHeightTextBox.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.FlaskHeightTextBox.Location = new System.Drawing.Point(9, 134);
-            this.FlaskHeightTextBox.Name = "FlaskHeightTextBox";
-            this.FlaskHeightTextBox.Size = new System.Drawing.Size(80, 20);
-            this.FlaskHeightTextBox.TabIndex = 4;
+            this.FlangeInnerDiameterTextBox.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FlangeInnerDiameterTextBox.Location = new System.Drawing.Point(9, 134);
+            this.FlangeInnerDiameterTextBox.Name = "FlangeInnerDiameterTextBox";
+            this.FlangeInnerDiameterTextBox.Size = new System.Drawing.Size(80, 20);
+            this.FlangeInnerDiameterTextBox.TabIndex = 4;
             // 
-            // FlaskWidthTextBox
+            // FlangeCenterDistanceTextBox
             // 
-            this.FlaskWidthTextBox.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.FlaskWidthTextBox.Location = new System.Drawing.Point(9, 87);
-            this.FlaskWidthTextBox.Name = "FlaskWidthTextBox";
-            this.FlaskWidthTextBox.Size = new System.Drawing.Size(80, 20);
-            this.FlaskWidthTextBox.TabIndex = 2;
+            this.FlangeCenterDistanceTextBox.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FlangeCenterDistanceTextBox.Location = new System.Drawing.Point(9, 87);
+            this.FlangeCenterDistanceTextBox.Name = "FlangeCenterDistanceTextBox";
+            this.FlangeCenterDistanceTextBox.Size = new System.Drawing.Size(80, 20);
+            this.FlangeCenterDistanceTextBox.TabIndex = 2;
             // 
-            // FlaskLengthTextBox
+            // FlangeExternalDiameterTextBox
             // 
-            this.FlaskLengthTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FlaskLengthTextBox.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.FlaskLengthTextBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.FlaskLengthTextBox.Location = new System.Drawing.Point(9, 40);
-            this.FlaskLengthTextBox.Name = "FlaskLengthTextBox";
-            this.FlaskLengthTextBox.Size = new System.Drawing.Size(80, 20);
-            this.FlaskLengthTextBox.TabIndex = 0;
+            this.FlangeExternalDiameterTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FlangeExternalDiameterTextBox.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FlangeExternalDiameterTextBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.FlangeExternalDiameterTextBox.Location = new System.Drawing.Point(9, 40);
+            this.FlangeExternalDiameterTextBox.Name = "FlangeExternalDiameterTextBox";
+            this.FlangeExternalDiameterTextBox.Size = new System.Drawing.Size(80, 20);
+            this.FlangeExternalDiameterTextBox.TabIndex = 0;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(434, 221);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.ClearButton);
             this.Controls.Add(this.BuildModelButton);
             this.Controls.Add(this.ParametersGroupBox);
             this.MaximumSize = new System.Drawing.Size(450, 260);
@@ -292,7 +294,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button ClearButton;
         private System.Windows.Forms.Button BuildModelButton;
         private System.Windows.Forms.GroupBox ParametersGroupBox;
         private System.Windows.Forms.Label label12;
@@ -307,12 +309,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox CaseThicknessTextBox;
-        private System.Windows.Forms.TextBox NeckDiameterTextBox;
-        private System.Windows.Forms.TextBox NeckHeightTextBox;
-        private System.Windows.Forms.TextBox FlaskHeightTextBox;
-        private System.Windows.Forms.TextBox FlaskWidthTextBox;
-        private System.Windows.Forms.TextBox FlaskLengthTextBox;
+        private System.Windows.Forms.TextBox HoleDiameterTextBox;
+        private System.Windows.Forms.TextBox FlangeLengthTextBox;
+        private System.Windows.Forms.TextBox HoleNumberTextBox;
+        private System.Windows.Forms.TextBox FlangeInnerDiameterTextBox;
+        private System.Windows.Forms.TextBox FlangeCenterDistanceTextBox;
+        private System.Windows.Forms.TextBox FlangeExternalDiameterTextBox;
     }
 }
 

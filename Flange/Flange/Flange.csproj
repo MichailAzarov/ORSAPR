@@ -31,6 +31,23 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Interop.Kompas6API5, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>obj\Debug\Interop.Kompas6API5.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.Kompas6Constants">
+      <HintPath>obj\Debug\Interop.Kompas6Constants.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.Kompas6Constants3D">
+      <HintPath>obj\Debug\Interop.Kompas6Constants3D.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.KompasAPI7">
+      <HintPath>obj\Debug\Interop.KompasAPI7.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,8 +60,10 @@
   <ItemGroup>
     <Compile Include="FlangeModeler.cs" />
     <Compile Include="ConnectingKompas.cs" />
-    <Compile Include="FlangeParameters.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
