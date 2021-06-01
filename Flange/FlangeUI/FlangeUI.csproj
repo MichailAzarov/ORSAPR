@@ -96,6 +96,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FlangeParametrs\FlangeParameters.csproj">
+      <Project>{39c79f8b-dcab-490b-9584-6b9c5e5186c5}</Project>
+      <Name>FlangeParameters</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Flange\Flange.csproj">
       <Project>{7ce685cf-19df-4186-9d17-e60cd6e4b205}</Project>
       <Name>Flange</Name>

@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7CE685CF-19DF-4186-9D17-E60CD6E4B205}</ProjectGuid>
+    <ProjectGuid>{39C79F8B-DCAB-490B-9584-6B9C5E5186C5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Flange</RootNamespace>
-    <AssemblyName>Flange</AssemblyName>
+    <RootNamespace>FlangeParametrs</RootNamespace>
+    <AssemblyName>FlangeParametrs</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -31,23 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Interop.Kompas6API5, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>obj\Debug\Interop.Kompas6API5.dll</HintPath>
-      <SpecificVersion>False</SpecificVersion>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="Interop.Kompas6Constants">
-      <HintPath>obj\Debug\Interop.Kompas6Constants.dll</HintPath>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="Interop.Kompas6Constants3D">
-      <HintPath>obj\Debug\Interop.Kompas6Constants3D.dll</HintPath>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="Interop.KompasAPI7">
-      <HintPath>obj\Debug\Interop.KompasAPI7.dll</HintPath>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -58,18 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FlangeModeler.cs" />
-    <Compile Include="ConnectingKompas.cs" />
+    <Compile Include="FlangeSizes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\FlangeParametrs\FlangeParameters.csproj">
-      <Project>{39c79f8b-dcab-490b-9584-6b9c5e5186c5}</Project>
-      <Name>FlangeParameters</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

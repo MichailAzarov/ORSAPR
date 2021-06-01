@@ -31,12 +31,6 @@
             this.ClearButton = new System.Windows.Forms.Button();
             this.BuildModelButton = new System.Windows.Forms.Button();
             this.ParametersGroupBox = new System.Windows.Forms.GroupBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -79,12 +73,6 @@
             this.ParametersGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ParametersGroupBox.Controls.Add(this.label12);
-            this.ParametersGroupBox.Controls.Add(this.label11);
-            this.ParametersGroupBox.Controls.Add(this.label10);
-            this.ParametersGroupBox.Controls.Add(this.label9);
-            this.ParametersGroupBox.Controls.Add(this.label8);
-            this.ParametersGroupBox.Controls.Add(this.label7);
             this.ParametersGroupBox.Controls.Add(this.label6);
             this.ParametersGroupBox.Controls.Add(this.label5);
             this.ParametersGroupBox.Controls.Add(this.label4);
@@ -103,66 +91,6 @@
             this.ParametersGroupBox.TabIndex = 5;
             this.ParametersGroupBox.TabStop = false;
             this.ParametersGroupBox.Text = "Параметры";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label12.Location = new System.Drawing.Point(299, 137);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(63, 13);
-            this.label12.TabIndex = 17;
-            this.label12.Text = "(от 4 до 32)";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label11.Location = new System.Drawing.Point(299, 90);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(65, 13);
-            this.label11.TabIndex = 16;
-            this.label11.Text = "(10 - 60 мм)";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label10.Location = new System.Drawing.Point(299, 43);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(88, 13);
-            this.label10.TabIndex = 15;
-            this.label10.Text = "(от 12 до 36 мм)";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label9.Location = new System.Drawing.Point(95, 137);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(100, 13);
-            this.label9.TabIndex = 14;
-            this.label9.Text = "(от 15 до 1220 мм)";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label8.Location = new System.Drawing.Point(95, 90);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(100, 13);
-            this.label8.TabIndex = 13;
-            this.label8.Text = "(от 50 до 1120 мм)";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label7.Location = new System.Drawing.Point(95, 43);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(100, 13);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "(от 90 до 1450 мм)";
             // 
             // label6
             // 
@@ -229,40 +157,55 @@
             this.HoleDiameterTextBox.ForeColor = System.Drawing.SystemColors.ControlText;
             this.HoleDiameterTextBox.Location = new System.Drawing.Point(213, 40);
             this.HoleDiameterTextBox.Name = "HoleDiameterTextBox";
-            this.HoleDiameterTextBox.Size = new System.Drawing.Size(80, 20);
+            this.HoleDiameterTextBox.Size = new System.Drawing.Size(94, 20);
             this.HoleDiameterTextBox.TabIndex = 1;
+            this.HoleDiameterTextBox.Text = "12";
+            this.HoleDiameterTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
+            this.HoleDiameterTextBox.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // FlangeLengthTextBox
             // 
             this.FlangeLengthTextBox.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FlangeLengthTextBox.Location = new System.Drawing.Point(213, 87);
             this.FlangeLengthTextBox.Name = "FlangeLengthTextBox";
-            this.FlangeLengthTextBox.Size = new System.Drawing.Size(80, 20);
+            this.FlangeLengthTextBox.Size = new System.Drawing.Size(94, 20);
             this.FlangeLengthTextBox.TabIndex = 3;
+            this.FlangeLengthTextBox.Text = "10";
+            this.FlangeLengthTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
+            this.FlangeLengthTextBox.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // HoleNumberTextBox
             // 
             this.HoleNumberTextBox.ForeColor = System.Drawing.SystemColors.ControlText;
             this.HoleNumberTextBox.Location = new System.Drawing.Point(213, 134);
             this.HoleNumberTextBox.Name = "HoleNumberTextBox";
-            this.HoleNumberTextBox.Size = new System.Drawing.Size(80, 20);
+            this.HoleNumberTextBox.Size = new System.Drawing.Size(94, 20);
             this.HoleNumberTextBox.TabIndex = 5;
+            this.HoleNumberTextBox.Text = "4";
+            this.HoleNumberTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
+            this.HoleNumberTextBox.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // FlangeInnerDiameterTextBox
             // 
             this.FlangeInnerDiameterTextBox.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FlangeInnerDiameterTextBox.Location = new System.Drawing.Point(9, 134);
             this.FlangeInnerDiameterTextBox.Name = "FlangeInnerDiameterTextBox";
-            this.FlangeInnerDiameterTextBox.Size = new System.Drawing.Size(80, 20);
+            this.FlangeInnerDiameterTextBox.Size = new System.Drawing.Size(98, 20);
             this.FlangeInnerDiameterTextBox.TabIndex = 4;
+            this.FlangeInnerDiameterTextBox.Text = "20";
+            this.FlangeInnerDiameterTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
+            this.FlangeInnerDiameterTextBox.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // FlangeCenterDistanceTextBox
             // 
             this.FlangeCenterDistanceTextBox.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FlangeCenterDistanceTextBox.Location = new System.Drawing.Point(9, 87);
             this.FlangeCenterDistanceTextBox.Name = "FlangeCenterDistanceTextBox";
-            this.FlangeCenterDistanceTextBox.Size = new System.Drawing.Size(80, 20);
+            this.FlangeCenterDistanceTextBox.Size = new System.Drawing.Size(98, 20);
             this.FlangeCenterDistanceTextBox.TabIndex = 2;
+            this.FlangeCenterDistanceTextBox.Text = "50";
+            this.FlangeCenterDistanceTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
+            this.FlangeCenterDistanceTextBox.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // FlangeExternalDiameterTextBox
             // 
@@ -271,8 +214,11 @@
             this.FlangeExternalDiameterTextBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.FlangeExternalDiameterTextBox.Location = new System.Drawing.Point(9, 40);
             this.FlangeExternalDiameterTextBox.Name = "FlangeExternalDiameterTextBox";
-            this.FlangeExternalDiameterTextBox.Size = new System.Drawing.Size(80, 20);
+            this.FlangeExternalDiameterTextBox.Size = new System.Drawing.Size(98, 20);
             this.FlangeExternalDiameterTextBox.TabIndex = 0;
+            this.FlangeExternalDiameterTextBox.Text = "90";
+            this.FlangeExternalDiameterTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
+            this.FlangeExternalDiameterTextBox.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // MainForm
             // 
@@ -297,12 +243,6 @@
         private System.Windows.Forms.Button ClearButton;
         private System.Windows.Forms.Button BuildModelButton;
         private System.Windows.Forms.GroupBox ParametersGroupBox;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
