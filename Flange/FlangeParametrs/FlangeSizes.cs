@@ -63,7 +63,7 @@ namespace FlangeSizes
         /// <summary>
         /// Количество крепёжных отверстий фланца должно быть от 4 до 32 штук.
         /// </summary>
-        public double HoleNumber
+        public int HoleNumber
         {
             get => _holeNumber;
             set
@@ -126,7 +126,7 @@ namespace FlangeSizes
         /// <summary>
         /// Количество крепёжных отверстий.
         /// </summary>
-        private double _holeNumber;
+        private int _holeNumber;
 
         /// <summary>
         /// Диаметр крепёжных отверстий.

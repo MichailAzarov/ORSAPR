@@ -43,7 +43,7 @@ namespace FlangeUI
                 _parameters.FlangeInnerDiameter = double.Parse(FlangeInnerDiameterTextBox.Text);
                 _parameters.FlangeLength = double.Parse(FlangeLengthTextBox.Text);
                 _parameters.HoleDiameter = double.Parse(HoleDiameterTextBox.Text);
-                _parameters.HoleNumber = double.Parse(HoleNumberTextBox.Text);
+                _parameters.HoleNumber = int.Parse(HoleNumberTextBox.Text);
 
                 _kompas.OpenKompas();
                 var model = new FlangeModeler(_kompas.Kompas);
@@ -104,7 +104,7 @@ namespace FlangeUI
                 }
                 if (control.Equals(HoleNumberTextBox))
                 {
-                    _parameters.HoleNumber = double.Parse(control.Text);
+                    _parameters.HoleNumber = int.Parse(control.Text);
                 }
             }
             catch (FormatException)
