@@ -42,7 +42,7 @@ namespace FlangeSizes
             get => _flangeCenterDistance;
             set
             {
-                CheckValue(value, "Межосевое расстояние", 50, 1120);
+                CheckValue(value, "Межосевое расстояние", 50, 1350);
                 _flangeCenterDistance = value;
             }
         }
