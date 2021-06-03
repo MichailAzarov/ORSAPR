@@ -38,11 +38,17 @@ namespace FlangeUI
         {
             try
             {
-                _parameters.FlangeExternalDiameter = double.Parse(FlangeExternalDiameterTextBox.Text);
-                _parameters.FlangeCenterDistance = double.Parse(FlangeCenterDistanceTextBox.Text);
-                _parameters.FlangeInnerDiameter = double.Parse(FlangeInnerDiameterTextBox.Text);
-                _parameters.FlangeLength = double.Parse(FlangeLengthTextBox.Text);
-                _parameters.HoleDiameter = double.Parse(HoleDiameterTextBox.Text);
+                 //TODO: RSDN
+                _parameters.FlangeExternalDiameter 
+                    = double.Parse(FlangeExternalDiameterTextBox.Text);
+                _parameters.FlangeCenterDistance 
+                    = double.Parse(FlangeCenterDistanceTextBox.Text);
+                _parameters.FlangeInnerDiameter 
+                    = double.Parse(FlangeInnerDiameterTextBox.Text);
+                _parameters.FlangeLength 
+                    = double.Parse(FlangeLengthTextBox.Text);
+                _parameters.HoleDiameter 
+                    = double.Parse(HoleDiameterTextBox.Text);
                 _parameters.HoleNumber = int.Parse(HoleNumberTextBox.Text);
 
                 _kompas.OpenKompas();
@@ -51,19 +57,24 @@ namespace FlangeUI
             }
             catch (FormatException)
             {
+                 //TODO: RSDN
                 MessageBox.Show(@"Данные введены некоректно, есть пустые поля или лишние запятые",
                     @"Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             catch (ArgumentException ex)
             {
+                 //TODO: RSDN
                 MessageBox.Show(ex.Message, @"Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        //TODO: XML комментарии?
         private void ValidateDoubleTextBoxs_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !Regex.IsMatch(e.KeyChar.ToString(), @"[\d\b,]");
         }
 
+        //TODO: XML комментарии?
         private void ClearButton_Click(object sender, EventArgs e)
         {
             FlangeExternalDiameterTextBox.Text = "";

@@ -25,6 +25,7 @@ namespace ConnectingKompas
             }
 
             if (Kompas == null) return;
+
             Kompas.Visible = true;
             Kompas.ActivateControllerAPI();
         }

@@ -9,7 +9,7 @@ namespace Flange.UnitTests
     /// </summary>
     public class FlangeParametersTest
     {
-        [Test]
+        [TestCase(TestName = "afdgfdshsdfg")]
         public void ExternalDiameter_GoodExternalDiameter_ReturnsSameExternalDiameter()
         {
             //Setup
