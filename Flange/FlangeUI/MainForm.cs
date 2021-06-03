@@ -58,23 +58,32 @@ namespace FlangeUI
             catch (FormatException)
             {
                  //TODO: RSDN
-                MessageBox.Show(@"Данные введены некоректно, есть пустые поля или лишние запятые",
+                MessageBox.Show(@"Есть пустые поля или лишние запятые",
                     @"Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             catch (ArgumentException ex)
             {
                  //TODO: RSDN
-                MessageBox.Show(ex.Message, @"Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(ex.Message, @"Предупреждение", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
-        //TODO: XML комментарии?
+        /// <summary>
+        /// Метод валидации введеных параметров в текстовом поле, ввод чисел.
+        /// </summary>
+        /// <param name="sender">Заполненный TextBox.</param>
+        /// <param name="e"></param>
         private void ValidateDoubleTextBoxs_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !Regex.IsMatch(e.KeyChar.ToString(), @"[\d\b,]");
         }
 
-        //TODO: XML комментарии?
+        /// <summary>
+        /// Очистка полей
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ClearButton_Click(object sender, EventArgs e)
         {
             FlangeExternalDiameterTextBox.Text = "";
